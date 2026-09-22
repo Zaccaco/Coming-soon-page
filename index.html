@@ -39,12 +39,12 @@
 
     :root {
       --beige: #E3E2E0;
-      --black: #171717;
-      --black-hover: #080808;
-      --text: #171717;
-      --muted: #484747;
+      --black: #181817;
+      --black-hover: #050505;
+      --text: #181817;
+      --muted: #555451;
       --white: #ffffff;
-      --line: rgba(23, 23, 23, 0.38);
+      --line: rgba(24, 24, 23, 0.30);
     }
 
 
@@ -60,23 +60,22 @@
     body {
       margin: 0;
       padding: 0;
-
       width: 100%;
       min-height: 100%;
 
-      background-color: #E3E2E0 !important;
-
+      background: var(--beige) !important;
       color: var(--text);
     }
 
     html {
-      background: #E3E2E0 !important;
+      background-color: var(--beige) !important;
+      scroll-behavior: smooth;
     }
 
     body {
       min-height: 100vh;
 
-      background: #E3E2E0 !important;
+      background-color: var(--beige) !important;
 
       font-family: "DM Sans", Arial, sans-serif;
 
@@ -100,12 +99,11 @@
       display: flex;
       flex-direction: column;
 
-      background: #E3E2E0 !important;
+      background: var(--beige) !important;
     }
 
     .container {
-      width: min(1160px, calc(100% - 40px));
-
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -116,17 +114,19 @@
 
     header {
       width: 100%;
-
-      padding-top: 28px;
-
-      background: #E3E2E0 !important;
+      background: var(--beige);
     }
 
     .logo-wrapper {
-      display: flex;
+      width: 100%;
 
+      display: flex;
       align-items: center;
       justify-content: center;
+
+      padding-top: 20px;
+
+      overflow: hidden;
 
       animation: fadeDown 0.7s ease both;
     }
@@ -134,12 +134,12 @@
     .logo {
       display: block;
 
-      width: min(400px, 80vw);
+      width: min(370px, 75vw);
       height: auto;
 
-      margin: 0;
-
       object-fit: contain;
+
+      margin: -28px 0 -25px;
     }
 
 
@@ -149,10 +149,9 @@
 
     main {
       flex: 1;
-
       width: 100%;
 
-      background: #E3E2E0 !important;
+      background: var(--beige);
     }
 
 
@@ -165,7 +164,7 @@
 
       margin: 0 auto;
 
-      padding: 58px 0 68px;
+      padding: 42px 0 58px;
 
       text-align: center;
     }
@@ -179,15 +178,15 @@
       align-items: center;
       justify-content: center;
 
-      gap: 20px;
+      gap: 18px;
 
-      margin-bottom: 38px;
+      margin-bottom: 32px;
 
       animation: fadeUp 0.7s 0.08s ease both;
     }
 
     .coming-line {
-      width: 80px;
+      width: 65px;
       height: 1px;
 
       background: var(--line);
@@ -196,10 +195,10 @@
     .coming-text {
       margin: 0;
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
 
-      letter-spacing: 0.30em;
+      letter-spacing: 0.31em;
 
       text-transform: uppercase;
 
@@ -218,10 +217,10 @@
 
       color: var(--text);
 
-      font-size: clamp(54px, 8.5vw, 105px);
+      font-size: clamp(55px, 8vw, 100px);
       font-weight: 700;
 
-      line-height: 0.90;
+      line-height: 0.91;
 
       letter-spacing: -0.065em;
 
@@ -234,17 +233,52 @@
        ========================================= */
 
     .description {
-      max-width: 680px;
+      max-width: 650px;
 
-      margin: 40px auto 0;
+      margin: 35px auto 0;
 
       color: var(--muted);
 
-      font-size: clamp(17px, 2vw, 21px);
+      font-size: clamp(17px, 2vw, 20px);
 
       line-height: 1.7;
 
       animation: fadeUp 0.7s 0.22s ease both;
+    }
+
+
+    /* =========================================
+       LOCATION / ESTABLISHED
+       ========================================= */
+
+    .meta {
+      margin-top: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 11px;
+
+      animation: fadeUp 0.7s 0.27s ease both;
+    }
+
+    .meta span {
+      font-size: 11px;
+      font-weight: 700;
+
+      letter-spacing: 0.20em;
+
+      text-transform: uppercase;
+    }
+
+    .meta-dot {
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+
+      background: var(--black);
     }
 
 
@@ -255,13 +289,13 @@
     .tagline {
       max-width: 700px;
 
-      margin: 48px auto 0;
+      margin: 38px auto 0;
 
-      padding-top: 23px;
+      padding-top: 21px;
 
       border-top: 1px solid var(--line);
 
-      animation: fadeUp 0.7s 0.29s ease both;
+      animation: fadeUp 0.7s 0.32s ease both;
     }
 
     .tagline p {
@@ -269,10 +303,10 @@
 
       color: var(--text);
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
 
-      letter-spacing: 0.18em;
+      letter-spacing: 0.17em;
 
       line-height: 1.6;
 
@@ -285,11 +319,11 @@
        ========================================= */
 
     .contact {
-      padding-bottom: 70px;
+      padding-bottom: 62px;
 
-      background: #E3E2E0 !important;
+      background: var(--beige);
 
-      animation: fadeUp 0.7s 0.36s ease both;
+      animation: fadeUp 0.7s 0.38s ease both;
     }
 
     .contact-heading {
@@ -297,9 +331,9 @@
 
       align-items: center;
 
-      gap: 22px;
+      gap: 20px;
 
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .contact-heading h2 {
@@ -307,10 +341,10 @@
 
       color: var(--text);
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
 
-      letter-spacing: 0.23em;
+      letter-spacing: 0.22em;
 
       text-transform: uppercase;
 
@@ -335,18 +369,17 @@
 
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 14px;
+      gap: 12px;
     }
 
     .contact-card {
       position: relative;
 
-      min-height: 185px;
+      min-height: 175px;
 
-      padding: 27px;
+      padding: 25px;
 
       display: flex;
-
       flex-direction: column;
       justify-content: space-between;
 
@@ -355,8 +388,7 @@
       color: var(--white);
 
       border: 1px solid var(--black);
-
-      border-radius: 4px;
+      border-radius: 3px;
 
       text-decoration: none;
 
@@ -373,7 +405,7 @@
 
       transform: translateY(-4px);
 
-      box-shadow: 0 7px 0 rgba(23, 23, 23, 0.20);
+      box-shadow: 0 7px 0 rgba(23, 23, 23, 0.14);
     }
 
     .contact-card:active {
@@ -382,24 +414,24 @@
 
 
     /* =========================================
-       ICONS
+       CARD ICONS
        ========================================= */
 
     .main-icon {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
 
-      stroke-width: 1.7;
+      stroke-width: 1.6;
     }
 
     .arrow-icon {
       position: absolute;
 
-      top: 27px;
-      right: 27px;
+      top: 25px;
+      right: 25px;
 
-      width: 22px;
-      height: 22px;
+      width: 21px;
+      height: 21px;
 
       stroke-width: 1.8;
 
@@ -418,9 +450,9 @@
     .card-title {
       display: block;
 
-      margin-top: 30px;
+      margin-top: 28px;
 
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
 
       letter-spacing: 0.05em;
@@ -431,15 +463,81 @@
     .card-detail {
       display: block;
 
-      margin-top: 6px;
+      margin-top: 5px;
 
-      color: rgba(255, 255, 255, 0.65);
+      color: rgba(255, 255, 255, 0.64);
 
       font-size: 14px;
 
       line-height: 1.4;
 
       overflow-wrap: anywhere;
+    }
+
+
+    /* =========================================
+       SOUND SIGNATURE
+       ========================================= */
+
+    .sound-signature {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 5px;
+
+      height: 28px;
+
+      margin: 0 auto 30px;
+    }
+
+    .sound-signature span {
+      display: block;
+
+      width: 2px;
+
+      background: var(--black);
+
+      border-radius: 10px;
+
+      opacity: 0.78;
+    }
+
+    .sound-signature span:nth-child(1) {
+      height: 6px;
+    }
+
+    .sound-signature span:nth-child(2) {
+      height: 13px;
+    }
+
+    .sound-signature span:nth-child(3) {
+      height: 21px;
+    }
+
+    .sound-signature span:nth-child(4) {
+      height: 11px;
+    }
+
+    .sound-signature span:nth-child(5) {
+      height: 25px;
+    }
+
+    .sound-signature span:nth-child(6) {
+      height: 16px;
+    }
+
+    .sound-signature span:nth-child(7) {
+      height: 8px;
+    }
+
+    .sound-signature span:nth-child(8) {
+      height: 18px;
+    }
+
+    .sound-signature span:nth-child(9) {
+      height: 10px;
     }
 
 
@@ -452,7 +550,7 @@
 
       padding-bottom: 25px;
 
-      background: #E3E2E0 !important;
+      background: var(--beige);
     }
 
     .footer-content {
@@ -473,7 +571,7 @@
 
       color: var(--text);
 
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
 
       letter-spacing: 0.14em;
@@ -481,9 +579,26 @@
       text-transform: uppercase;
     }
 
+    .footer-right {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+    }
+
+    .footer-right span:first-child {
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
     .footer-square {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
 
       background: var(--black);
     }
@@ -497,13 +612,11 @@
 
       from {
         opacity: 0;
-
-        transform: translateY(16px);
+        transform: translateY(14px);
       }
 
       to {
         opacity: 1;
-
         transform: translateY(0);
       }
 
@@ -513,13 +626,11 @@
 
       from {
         opacity: 0;
-
-        transform: translateY(-10px);
+        transform: translateY(-8px);
       }
 
       to {
         opacity: 1;
-
         transform: translateY(0);
       }
 
@@ -527,7 +638,7 @@
 
 
     /* =========================================
-       TABLET / MOBILE
+       MOBILE
        ========================================= */
 
     @media (max-width: 700px) {
@@ -539,45 +650,50 @@
 
       /* LOGO */
 
-      header {
-        padding-top: 22px;
+      .logo-wrapper {
+        padding-top: 10px;
       }
 
       .logo {
-        width: min(350px, 82vw);
+        width: min(305px, 72vw);
+
+        margin: -20px 0 -18px;
       }
 
 
       /* HERO */
 
       .hero {
-        padding-top: 48px;
-        padding-bottom: 55px;
+        padding-top: 34px;
+        padding-bottom: 48px;
       }
 
-      .coming-soon {
-        gap: 15px;
 
-        margin-bottom: 32px;
+      /* COMING SOON */
+
+      .coming-soon {
+        gap: 14px;
+
+        margin-bottom: 29px;
       }
 
       .coming-line {
-        width: 48px;
+        width: 43px;
       }
 
       .coming-text {
-        font-size: 11px;
+        font-size: 10px;
 
-        letter-spacing: 0.26em;
+        letter-spacing: 0.27em;
       }
 
 
       /* TITLE */
 
       h1 {
-        font-size: clamp(49px, 14vw, 72px);
+        font-size: clamp(47px, 13.5vw, 69px);
 
-        line-height: 0.91;
+        line-height: 0.92;
 
         letter-spacing: -0.06em;
       }
@@ -586,77 +702,118 @@
       /* DESCRIPTION */
 
       .description {
-        margin-top: 32px;
+        max-width: 620px;
 
-        font-size: 17px;
+        margin-top: 29px;
 
-        line-height: 1.65;
+        color: #4B4A47;
+
+        font-size: 16px;
+
+        line-height: 1.68;
+      }
+
+
+      /* META */
+
+      .meta {
+        margin-top: 26px;
+
+        gap: 9px;
+      }
+
+      .meta span {
+        font-size: 9px;
+
+        letter-spacing: 0.18em;
+      }
+
+      .meta-dot {
+        width: 3px;
+        height: 3px;
       }
 
 
       /* TAGLINE */
 
       .tagline {
-        margin-top: 40px;
+        margin-top: 31px;
 
-        padding-top: 21px;
+        padding-top: 19px;
       }
 
       .tagline p {
-        font-size: 11px;
+        font-size: 10px;
 
-        letter-spacing: 0.15em;
+        letter-spacing: 0.14em;
+
+        line-height: 1.7;
       }
 
 
       /* CONTACT */
 
       .contact {
-        padding-bottom: 55px;
+        padding-bottom: 48px;
       }
 
       .contact-heading {
-        gap: 16px;
+        gap: 14px;
+
+        margin-bottom: 15px;
       }
 
       .contact-heading h2 {
-        font-size: 12px;
+        font-size: 11px;
 
-        letter-spacing: 0.19em;
+        letter-spacing: 0.18em;
       }
 
 
-      /* CONTACT CARDS */
+      /* CARDS */
 
       .contact-grid {
         grid-template-columns: 1fr;
 
-        gap: 10px;
+        gap: 9px;
       }
 
       .contact-card {
-        min-height: 145px;
+        min-height: 137px;
 
-        padding: 22px;
+        padding: 21px;
       }
 
       .main-icon {
-        width: 32px;
-        height: 32px;
+        width: 29px;
+        height: 29px;
       }
 
       .arrow-icon {
-        top: 22px;
-        right: 22px;
+        top: 21px;
+        right: 21px;
 
-        width: 20px;
-        height: 20px;
+        width: 19px;
+        height: 19px;
       }
 
       .card-title {
-        margin-top: 24px;
+        margin-top: 21px;
 
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      .card-detail {
+        font-size: 13px;
+      }
+
+
+      /* SOUND */
+
+      .sound-signature {
+        margin-bottom: 25px;
+
+        transform: scale(0.88);
       }
 
 
@@ -666,10 +823,18 @@
         padding-bottom: 20px;
       }
 
-      .footer-content p {
-        font-size: 9px;
+      .footer-content {
+        gap: 12px;
+      }
 
-        letter-spacing: 0.10em;
+      .footer-content p {
+        font-size: 8px;
+
+        letter-spacing: 0.09em;
+      }
+
+      .footer-right span:first-child {
+        display: none;
       }
 
     }
@@ -681,16 +846,20 @@
 
     @media (max-width: 390px) {
 
+      .logo {
+        width: 285px;
+      }
+
       h1 {
-        font-size: 47px;
+        font-size: 45px;
       }
 
       .description {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .coming-line {
-        width: 35px;
+        width: 31px;
       }
 
     }
@@ -782,6 +951,21 @@
             precision, and energy behind every Zacca.Co experience.
           </p>
 
+
+          <!-- LOCATION -->
+
+          <div class="meta">
+
+            <span>Lebanon</span>
+
+            <span class="meta-dot"></span>
+
+            <span>Est. 1997</span>
+
+          </div>
+
+
+          <!-- TAGLINE -->
 
           <div class="tagline">
 
@@ -958,6 +1142,30 @@
 
         </section>
 
+
+
+        <!-- =====================================
+             SOUND / LIGHT SIGNATURE
+             ===================================== -->
+
+        <div
+          class="sound-signature"
+          aria-hidden="true"
+        >
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+
       </div>
 
     </main>
@@ -978,7 +1186,16 @@
             Zacca.Co © 1997 — Present
           </p>
 
-          <span class="footer-square"></span>
+
+          <div class="footer-right">
+
+            <span>
+              Sound • Light • Technology
+            </span>
+
+            <span class="footer-square"></span>
+
+          </div>
 
         </div>
 
@@ -990,19 +1207,23 @@
   </div>
 
 
+
   <!-- =====================================
        ICON INITIALIZATION
        ===================================== -->
 
   <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
 
-      if (window.lucide) {
-        lucide.createIcons();
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+
       }
-
-    });
+    );
 
   </script>
 
